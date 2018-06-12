@@ -10,10 +10,10 @@ namespace BoardGameEngine
         private List<IRule> rules;
         private List<IPlayer> players;
         private Board board;
-    }
 
-    public GameController(Board board)
-    {
-        this.board = board;
+        public GameController(Board board)
+        {
+            this.board = board;
+        }
     }
 }
