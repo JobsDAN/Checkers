@@ -5,9 +5,10 @@ using System.Text;
 
 namespace BoardGameEngine
 {
-    public delegate void CellCelected(Cell cell);
+    public delegate void CellSelected(Cell cell);
     interface IPlayer
     {
-        event CellCelected cellSelected;
+        event CellSelected CellSelected;
+        event CellSelected DoEvent;
     }
 }

@@ -8,7 +8,8 @@ using BoardGameEngine;
 
 public class RealPlayer : MonoBehaviour, IPlayer
 {
-    public event CellCelected cellSelected;
+    public event CellSelected CellSelected;
+    public event CellSelected DoEvent;
     private new Camera camera;
 
     [SerializeField]
@@ -31,7 +32,7 @@ public class RealPlayer : MonoBehaviour, IPlayer
                 Cell selectedCell = boardView.getCellAtPoint(hitPoint);
                 if (selectedCell != null) {
                     Debug.Log(selectedCell.horizontalPos + " " + selectedCell.verticalPos);
-                    //cellSelected(selectedCell);
+                    //CellSelected(selectedCell);
                 }
             }
         }

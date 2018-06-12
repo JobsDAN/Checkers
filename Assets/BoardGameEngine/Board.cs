@@ -18,22 +18,21 @@ namespace BoardGameEngine
         private IUnitFactory factory;
         public const int BoardSize = 8;
 
-        public CheckerBoard(IUnitFactory factory) {
+        public CheckerBoard(IUnitFactory factory)
+        {
             this.factory = factory;
-
-            Cells = new Cell[BoardSize, BoardSize];
-            for (int i = 0; i < BoardSize; i++)
-            {
-                for (int j = 0; j < BoardSize; j++)
-                {
-                    Cells[i, j] = new Cell(i, j, factory.create(i, j, Unit.UnitType.Men));
-                }
-            }
+            this.Cells = new Cell[BoardSize, BoardSize];
+            recreate();
         }
 
         public override void recreate()
         {
-            
+            for (int i = 0; i < BoardSize; i++) {
+                for (int j = 0; j < BoardSize; j++) {
+                    Unit unit = factory.create(i, j, Unit.UnitType.Men);
+                    Cells[i, j] = new Cell(i, j, unit);
+                }
+            }
         }
     }
 }
