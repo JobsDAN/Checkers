@@ -7,7 +7,7 @@ namespace BoardGameEngine
     {
         public ITurn checkTurn(Board board, Cell from, Cell to)
         {
-            return null;
+            return new ManTurn(from, to);
         }
 
         public bool checkEnd(Board board)

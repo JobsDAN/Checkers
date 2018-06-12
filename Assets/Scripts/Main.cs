@@ -6,6 +6,8 @@ using UnityEngine;
 public class Main : MonoBehaviour {
 
 	public GameObject boardObj;
+	public GameObject firstPlayer;
+	public GameObject secondPlayer;
 
 	private GameController gameController;
 	private CheckerRule checkerRule;
@@ -22,6 +24,8 @@ public class Main : MonoBehaviour {
 		boardView.setBoard(board);
 
 		gameController = new GameController(board, checkerRule);
+		gameController.AddPlayer(firstPlayer.GetComponent<RealPlayer>());
+		gameController.AddPlayer(secondPlayer.GetComponent<RealPlayer>());
 	}
 	
 	void Update ()
