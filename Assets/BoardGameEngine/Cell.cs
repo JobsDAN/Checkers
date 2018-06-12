@@ -5,7 +5,7 @@ using System.Text;
 
 namespace BoardGameEngine
 {
-    class Cell
+    public class Cell
     {
         public int horizontalPos { get; set; }
         public int verticalPos { get; set; }

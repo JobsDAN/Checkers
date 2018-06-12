@@ -5,7 +5,7 @@ using System.Text;
 
 namespace BoardGameEngine
 {
-    abstract class Board
+    public abstract class Board
     {
         public List<Cell> Cells { get; set; }
 
@@ -21,7 +21,7 @@ namespace BoardGameEngine
             this.factory = factory;
         }
 
-        public void recreate()
+        public override void recreate()
         {
         }
     }
