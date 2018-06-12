@@ -10,6 +10,5 @@ namespace BoardGameEngine
         public int horizontalPos { get; set; }
         public int verticalPos { get; set; }
         public Unit unit { get; set; }
-
     }
 }

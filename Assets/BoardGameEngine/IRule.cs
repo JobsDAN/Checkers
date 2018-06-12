@@ -7,6 +7,6 @@ namespace BoardGameEngine
 {
     interface IRule
     {
-        bool validate(Board board);
+        ITurn validate(Board board);
     }
 }
