@@ -5,25 +5,14 @@ using UnityEngine;
 
 public class Main : MonoBehaviour {
 
-	// TODO: Remove
-	private class GameController {
-		public GameController(Board b) { }
-	}
-
-	private interface IUnit {
-	}
-
-	private class Unit {
-	}
-
 	public GameObject boardObj;
 
 	private GameController gameController;
 	private UnitFactory unitFactory;
 	private CheckerBoard board;
 
-	// Use this for initialization
-	void Start () {
+	void Start ()
+	{
 		unitFactory = new UnitFactory();
 		board = new CheckerBoard(unitFactory);
 
@@ -33,8 +22,8 @@ public class Main : MonoBehaviour {
 		gameController = new GameController(board);
 	}
 	
-	// Update is called once per frame
-	void Update () {
+	void Update ()
+	{
 		
 	}
 }
