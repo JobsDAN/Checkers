@@ -21,7 +21,7 @@ public class RealPlayer : MonoBehaviour, IPlayer
 
     private void Update()
     {
-        if (Input.GetMouseButton(0)) {
+        if (Input.GetMouseButtonUp(0)) {
             Ray ray = camera.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
 
@@ -29,9 +29,9 @@ public class RealPlayer : MonoBehaviour, IPlayer
                 Vector3 hitPoint = hit.point;
 
                 Cell selectedCell = boardView.getCellAtPoint(hitPoint);
-                if (selectedCell != null) {
-                    Debug.Log(selectedCell.horizontalPos + " " + selectedCell.verticalPos);
-                    //cellSelected(selectedCell);
+                if (selectedCell != null && cellSelected != null)
+                {
+                    cellSelected(selectedCell);
                 }
             }
         }

@@ -7,7 +7,7 @@ namespace BoardGameEngine
 	{
 		public Unit create(int x, int y, Unit.UnitType unitType)
 		{
-			return new Unit();
+			return new Unit(unitType);
 		}
 
 	}

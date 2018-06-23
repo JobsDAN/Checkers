@@ -154,6 +154,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boardObj: {fileID: 1048408855}
+  player1: {fileID: 1826726375}
+  selectedCellSprite: {fileID: 1230493456597366, guid: 77faa1e2418838c4b89bc44265c2c381,
+    type: 2}
 --- !u!1 &1048408855
 GameObject:
   m_ObjectHideFlags: 0
@@ -184,6 +187,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c8130fbe0db54fa78c4e0d1b89eec8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  whiteChecker: {fileID: 1217697484046182, guid: 039577cd8ba8d084384430307d92dcda,
+    type: 2}
+  blackChecker: {fileID: 1433217492535454, guid: 91af18536cc2f0148b10c02c08b9433b,
+    type: 2}
 --- !u!64 &1048408857
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -213,7 +220,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 48060e4f2e51759458854e5d26e50bb0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -305,7 +312,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 5.51
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -344,7 +351,7 @@ GameObject:
   - component: {fileID: 1826726376}
   - component: {fileID: 1826726375}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Player1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

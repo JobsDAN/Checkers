@@ -7,6 +7,6 @@ namespace BoardGameEngine
 {
     interface ITurn
     {
-        void perform(Board board);
+        void perform(IBoard board);
     }
 }
